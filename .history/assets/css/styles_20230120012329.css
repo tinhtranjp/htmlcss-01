@@ -1,0 +1,144 @@
+/* ========================> Header <======================= */
+
+.header {
+  padding-top: 28px;
+  background: #fffcf4;
+}
+
+.fixed {
+  position: sticky;
+  left: 0;
+  top: -28px;
+}
+
+.header .logo:hover {
+  cursor: pointer;
+}
+
+.header .body {
+  display: flex;
+  align-items: center;
+  padding: 8px 0;
+}
+
+.header nav {
+  margin-left: auto;
+}
+
+.header .nav-list {
+  display: flex;
+  align-items: center;
+}
+
+.header .nav-item > a {
+  display: inline-block;
+  padding: 8px 21px;
+  line-height: 1.75;
+  color: #5f5b53;
+}
+
+.header .nav-item > a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 1.2px;
+  background: var(--primary-color);
+  transition: ease 0.4s;
+}
+
+.header .nav-item > a:hover::after {
+  width: 100%;
+}
+
+.header .acction {
+  margin-left: 49px;
+}
+
+.acction-btn {
+  min-width: 144px;
+}
+
+.acction-btn:hover {
+  background-color: transparent;
+  color: #333;
+  background-color: var(--primary-color);
+  opacity: 0.7;
+  transition: ease-in 0.2s;
+}
+
+/* ======================> Hero <==================== */
+
+.hero {
+  padding: 56px 0 65px 0;
+  height: calc(100vh - 94px);
+  background: #fffcf4;
+}
+
+.hero-body {
+  display: flex;
+}
+
+.hero .hero-img-block {
+  width: 50%;
+}
+
+.hero .hero-img-block img {
+  width: 470px;
+  height: calc(100vh - 215px);
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.hero .hero-info {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-info .title {
+  width: 470px;
+  font-weight: 700;
+  font-size: 5.8rem;
+  line-height: 1.17;
+  letter-spacing: -0.02em;
+  color: #171100;
+}
+
+.hero-info .desc {
+  font-size: 1.8rem;
+  line-height: 1.67;
+  width: 470px;
+  margin-top: 22px;
+}
+
+.hero-info .accition-group {
+  display: flex;
+  align-items: center;
+}
+
+.hero-info .watch-group {
+  display: flex;
+  align-items: center;
+}
+
+.img-wrap {
+  width: 40px;
+  height: 40px;
+  background-color: aqua;
+  border-radius: 50%;
+  margin-left: 28px;
+}
+
+.hero-info .watch-group img {
+  width: 12px;
+  height: 12px;
+}
+
+.hero-info .watch-group h3 {
+  font-weight: 600;
+  font-size: 1.8rem;
+  line-height: 1.67;
+  color: #171100;
+}

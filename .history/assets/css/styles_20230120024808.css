@@ -1,0 +1,238 @@
+/* ========================> Header <======================= */
+
+.header {
+  padding-top: 28px;
+  background: #fffcf4;
+}
+
+.fixed {
+  position: sticky;
+  left: 0;
+  top: -28px;
+}
+
+.header .logo:hover {
+  cursor: pointer;
+}
+
+.header .body {
+  display: flex;
+  align-items: center;
+  padding: 8px 0;
+}
+
+.header nav {
+  margin-left: auto;
+}
+
+.header .nav-list {
+  display: flex;
+  align-items: center;
+}
+
+.header .nav-item > a {
+  display: inline-block;
+  padding: 8px 21px;
+  line-height: 1.75;
+  color: #5f5b53;
+}
+
+.header .nav-item > a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 1.2px;
+  background: var(--primary-color);
+  transition: ease 0.4s;
+}
+
+.header .nav-item > a:hover::after {
+  width: 100%;
+}
+
+.header .acction {
+  margin-left: 49px;
+}
+
+.acction-btn {
+  min-width: 144px;
+}
+
+.acction-btn:hover {
+  background-color: transparent;
+  color: #333;
+  background-color: var(--primary-color);
+  opacity: 0.7;
+  transition: ease-in 0.2s;
+}
+
+/* ======================> Hero <==================== */
+
+.hero {
+  padding: 56px 0 65px 0;
+  height: calc(100vh - 94px);
+  background: #fffcf4;
+}
+
+.hero-body {
+  display: flex;
+}
+
+.hero .hero-img-block {
+  width: 50%;
+}
+
+.hero-img-wrap,
+.hero .hero-img-block .hero-img {
+  width: 470px;
+  height: calc(100vh - 215px);
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.hero-img-wrap {
+  position: relative;
+}
+
+.hero-img-block .marketing {
+  position: absolute;
+  background: #fff;
+  padding: 24px;
+  border-radius: 12px;
+  bottom: 48px;
+  right: -80px;
+  box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.05);
+}
+
+.hero-img-block .marketing .group {
+  display: flex;
+}
+
+.hero-img-block .marketing .group:not(:first-child) {
+  margin-top: 14px;
+}
+
+.hero-img-block .marketing .info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 16px;
+}
+
+.hero-img-block .marketing .info a {
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.86;
+}
+
+.hero-img-block .marketing .title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  line-height: 1.67;
+  color: #171100;
+}
+
+.hero .hero-info {
+  height: 48px;
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  margin-left: 230px;
+}
+
+.hero-info .title {
+  width: 470px;
+  font-weight: 700;
+  font-size: 5.8rem;
+  line-height: 1.17;
+  letter-spacing: -0.02em;
+  color: #171100;
+}
+
+.hero-info .desc {
+  font-size: 1.8rem;
+  line-height: 1.67;
+  width: 470px;
+  margin-top: 22px;
+}
+
+.hero-info .accition-group {
+  margin-top: 38px;
+  display: flex;
+  align-items: center;
+}
+
+.hero-info .watch-group {
+  display: flex;
+  align-items: center;
+}
+
+.hero-btn {
+  min-width: 180px;
+  height: 64px;
+  line-height: 64px;
+  background: #ffb900;
+  border-radius: 32px;
+  transition: ease 0.3s;
+}
+
+.hero-btn:hover {
+  opacity: 0.8;
+}
+
+.img-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  border-radius: 50%;
+  margin-left: 28px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.07);
+}
+
+.hero-info .watch-group img {
+  width: 12px;
+  height: 12px;
+}
+
+.hero-info .watch-group h3 {
+  font-weight: 600;
+  font-size: 1.8rem;
+  line-height: 1.67;
+  color: #171100;
+  margin-left: 14px;
+}
+
+.hero-info p:not(.desc) {
+  margin-top: 48px;
+  font-size: 1.8rem;
+  line-height: 1.67;
+  color: #5f5b53;
+}
+
+.hero-info .qty {
+  display: flex;
+  margin-top: 8px;
+}
+
+.hero-info .qty strong {
+  font-family: "Sen";
+  font-weight: 700;
+  font-size: 4.4rem;
+  line-height: 1.23;
+  color: #171100;
+}
+
+.hero-info .qty span {
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.8rem;
+  line-height: 1.67;
+  color: #5f5b53;
+}
+
+.hero-info .qty strong:last-child {
+  margin-left: 28px;
+}

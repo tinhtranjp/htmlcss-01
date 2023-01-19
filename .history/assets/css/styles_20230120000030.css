@@ -1,0 +1,30 @@
+.header .body {
+  display: flex;
+  align-items: center;
+}
+
+.header nav {
+  margin-left: auto;
+}
+
+.header .nav-list {
+  display: flex;
+  align-items: center;
+}
+
+.header .nav-item > a {
+  display: inline-block;
+  margin-left: 42px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  /* identical to box height, or 175% */
+
+  text-align: center;
+
+  color: #5f5b53;
+}
+
+.header .acction {
+  margin-left: 70px;
+}

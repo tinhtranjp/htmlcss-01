@@ -1,0 +1,40 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  color: #5f5b53;
+}
+
+h1,
+h2 {
+  font-family: "Sen", sans-serif;
+}
+
+.text-line2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.text-line2.text-line3 {
+  -webkit-line-clamp: 3;
+}
+
+.btn {
+  width: 118px;
+  height: 50px;
+  left: 555px;
+  top: 4463px;
+
+  background: #171100;
+  border-radius: 25px;
+}

@@ -1,0 +1,22 @@
+.header .body {
+  display: flex;
+  align-items: center;
+}
+
+.header nav {
+  margin-left: auto;
+}
+
+.header .nav-list {
+  display: flex;
+  align-items: center;
+}
+
+.header .nav-item > a {
+  display: inline-block;
+  margin-left: 42px;
+}
+
+.header .acction {
+  margin-left: 70px;
+}

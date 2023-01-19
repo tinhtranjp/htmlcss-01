@@ -1,0 +1,13 @@
+.header .body {
+  display: flex;
+  align-items: center;
+}
+
+.header nav {
+  margin-left: auto;
+}
+
+.header .nav-list {
+  display: flex;
+  align-items: center;
+}

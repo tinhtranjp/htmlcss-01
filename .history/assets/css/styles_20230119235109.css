@@ -1,0 +1,8 @@
+.header .body {
+  display: flex;
+}
+
+.header .nav-list {
+  display: flex;
+  align-items: center;
+}
