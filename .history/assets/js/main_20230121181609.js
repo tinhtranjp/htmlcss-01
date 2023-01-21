@@ -1,0 +1,5 @@
+//main
+
+(() => {
+  console.log("abc");
+})();

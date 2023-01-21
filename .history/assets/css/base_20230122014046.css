@@ -1,0 +1,147 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #ffb900;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-padding-top: 50px;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  color: #5f5b53;
+}
+
+.content {
+  width: 1170px;
+  max-width: calc(100% - 48px);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1,
+h2 {
+  font-family: "Sen", sans-serif;
+  font-weight: 700;
+}
+
+.text-line2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.text-line2.text-line3 {
+  -webkit-line-clamp: 3;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn {
+  display: inline-block;
+  font-weight: 600;
+
+  min-width: 118px;
+  height: 50px;
+  padding: 0 16px;
+  border-radius: 25px;
+
+  line-height: 50px;
+  font-size: 1.4rem;
+  text-align: center;
+
+  color: #fff;
+  background: #171100;
+}
+
+.btn:hover {
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+/* =====================> Modal <======================= */
+
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  display: flex;
+}
+
+.modal .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgb(0, 0, 0, 0.3);
+}
+
+.modal .body {
+  padding: 48px;
+  margin: auto;
+  border-radius: 20px;
+  width: 800px;
+  height: 500px;
+  background: #fff;
+  box-shadow: 0px 18px 36px rgba(0, 0, 0, 0.05);
+  z-index: 2;
+}
+
+.auth-form-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.auth-form-heading {
+  font-size: 3.5rem;
+}
+
+.switch-btn {
+  font-size: 2.5rem;
+  color: #ffb900;
+}
+
+.auth-form_group:first-child {
+  margin-top: 40px;
+}
+
+.auth-form_group:not(:first-child) {
+  margin-top: 20px;
+}
+
+.auth-form_group input {
+  width: 600px;
+  height: 45px;
+  margin: auto;
+  display: block;
+}
+
+.auth-control {
+  margin-top: 60px;
+  display: flex;
+  justify-content: end;
+}
+
+.auth-control button {
+  margin-right: 52px;
+  padding: 14px 22px;
+  min-width: 170px;
+  border: none;
+  border-radius: 2px;
+}
+
+.auth-control button:last-child {
+  background: var(--primary-color);
+}
