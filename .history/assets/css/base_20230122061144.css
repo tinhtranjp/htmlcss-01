@@ -104,19 +104,6 @@ a {
   display: none;
 }
 
-.switch-body {
-  width: 170px;
-  height: 30px;
-  background: transparent;
-  position: absolute;
-  right: 92px;
-  top: 54px;
-  border: none;
-}
-.switch-body:hover {
-  cursor: pointer;
-  opacity: 0.7;
-}
 .modal.open {
   display: flex;
 }
@@ -145,7 +132,6 @@ a {
 }
 
 .wrap-body {
-  position: relative;
   border-radius: 20px;
   background: #fff;
   margin: auto;

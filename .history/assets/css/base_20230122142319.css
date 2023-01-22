@@ -107,13 +107,13 @@ a {
 .switch-body {
   width: 170px;
   height: 30px;
-  background: transparent;
+  background: red;
   position: absolute;
-  right: 92px;
-  top: 54px;
+  top: 120px;
+  left: 1089px;
   border: none;
 }
-.switch-body:hover {
+.switch-body:hover .switch-btn {
   cursor: pointer;
   opacity: 0.7;
 }
@@ -145,7 +145,6 @@ a {
 }
 
 .wrap-body {
-  position: relative;
   border-radius: 20px;
   background: #fff;
   margin: auto;

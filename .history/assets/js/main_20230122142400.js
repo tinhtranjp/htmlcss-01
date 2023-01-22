@@ -96,24 +96,15 @@ function showModal() {
 
   modal.addEventListener("click", (event) => {
     if (bodyModal && bodyModal.contains(event.target)) return;
+    if (hehe) return;
     modal.classList.remove("open");
   });
 
-  switchBtn.addEventListener("click", () => {
-    signup.classList.toggle("open");
-    login.classList.toggle("open");
-  });
-}
-
-function initForm() {
-  const form = document.querySelector(".auth-form");
-
-  form.onsubmit;
+  switchBtn.addEventListener("click", () => {});
 }
 
 (() => {
   navLinkactive();
   activeFace();
   showModal();
-  initForm();
 })();

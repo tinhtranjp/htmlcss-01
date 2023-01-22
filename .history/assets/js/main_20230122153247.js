@@ -106,9 +106,14 @@ function showModal() {
 }
 
 function initForm() {
-  const form = document.querySelector(".auth-form");
+  const form = document.querySelector(".form-submit");
+  form.addEventListener("click", () => {
+    console.log("abc");
+  });
 
-  form.onsubmit;
+  form.addEventListener("submit", () => {
+    form.addEventListener("submit", () => {});
+  });
 }
 
 (() => {

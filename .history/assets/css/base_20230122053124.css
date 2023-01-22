@@ -29,17 +29,6 @@ body {
   }
 }
 
-@keyframes showmodal {
-  from {
-    transform: translateY(-100px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
 .content {
   width: 1170px;
   max-width: calc(100% - 48px);
@@ -104,37 +93,12 @@ a {
   display: none;
 }
 
-.switch-body {
-  width: 170px;
-  height: 30px;
-  background: transparent;
-  position: absolute;
-  right: 92px;
-  top: 54px;
-  border: none;
-}
-.switch-body:hover {
-  cursor: pointer;
-  opacity: 0.7;
-}
 .modal.open {
-  display: flex;
+  display: block;
 }
 
 .login {
   display: none;
-}
-
-.signup {
-  display: none;
-}
-
-.login.open {
-  display: block;
-}
-
-.signup.open {
-  display: block;
 }
 
 .modal .overlay {
@@ -145,14 +109,12 @@ a {
 }
 
 .wrap-body {
-  position: relative;
   border-radius: 20px;
   background: #fff;
   margin: auto;
   overflow: hidden;
   min-width: 800px;
   z-index: 2;
-  animation: showmodal linear 0.2s;
 }
 
 .wrap-body {
@@ -223,22 +185,20 @@ a {
   font-weight: 500;
   font-size: 1.6rem;
   border-radius: 2px;
-  transition: ease 0.2s;
-}
-
-.auth-control button:first-child:hover {
-  background-color: #333;
 }
 
 .auth-control button:last-child {
   color: #fff;
-  margin-left: 50px;
-  background: var(--primary-color);
 }
 
 .auth-control button:hover {
   cursor: pointer;
   opacity: 0.8;
+}
+
+.auth-control button:last-child {
+  background: var(--primary-color);
+  margin-left: 50px;
 }
 
 .socials-wrap {
@@ -255,7 +215,7 @@ a {
 }
 
 .social-group {
-  background-color: #92bdf4;
+  background-color: #fff;
   padding: 10px 18px;
   border-radius: 2px;
   transition: ease 0.2s;

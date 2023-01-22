@@ -105,12 +105,6 @@ function showModal() {
   });
 }
 
-function initForm() {
-  const form = document.querySelector(".auth-form");
-
-  form.onsubmit;
-}
-
 (() => {
   navLinkactive();
   activeFace();

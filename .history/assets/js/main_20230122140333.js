@@ -81,9 +81,10 @@ function showModal() {
   const modalBtn = document.querySelectorAll(".showmodal");
   const modal = document.querySelector(".modal");
   const bodyModal = document.querySelector(".wrap-body");
-  const switchBtn = document.querySelector(".switch-body");
+  const switchBtn = document.querySelector(".switch-btn");
   const signup = document.querySelector(".signup");
   const login = document.querySelector(".login");
+  const hehe = document.querySelector(".hehe");
 
   console.log(switchBtn);
   console.log(bodyModal);
@@ -96,24 +97,18 @@ function showModal() {
 
   modal.addEventListener("click", (event) => {
     if (bodyModal && bodyModal.contains(event.target)) return;
+    if (hehe) return;
     modal.classList.remove("open");
   });
 
-  switchBtn.addEventListener("click", () => {
+  login.addEventListener("click", () => {
     signup.classList.toggle("open");
     login.classList.toggle("open");
   });
-}
-
-function initForm() {
-  const form = document.querySelector(".auth-form");
-
-  form.onsubmit;
 }
 
 (() => {
   navLinkactive();
   activeFace();
   showModal();
-  initForm();
 })();

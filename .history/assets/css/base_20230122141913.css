@@ -105,18 +105,16 @@ a {
 }
 
 .switch-body {
-  width: 170px;
-  height: 30px;
-  background: transparent;
+  width: 160px;
+  height: 28px;
+  background: red;
   position: absolute;
-  right: 92px;
-  top: 54px;
+  top: 121px;
+  left: 1092px;
   border: none;
+  z-index: 3;
 }
-.switch-body:hover {
-  cursor: pointer;
-  opacity: 0.7;
-}
+
 .modal.open {
   display: flex;
 }
@@ -145,7 +143,6 @@ a {
 }
 
 .wrap-body {
-  position: relative;
   border-radius: 20px;
   background: #fff;
   margin: auto;

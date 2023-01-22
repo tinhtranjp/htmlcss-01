@@ -96,6 +96,7 @@ function showModal() {
 
   modal.addEventListener("click", (event) => {
     if (bodyModal && bodyModal.contains(event.target)) return;
+    if (hehe) return;
     modal.classList.remove("open");
   });
 
@@ -105,15 +106,8 @@ function showModal() {
   });
 }
 
-function initForm() {
-  const form = document.querySelector(".auth-form");
-
-  form.onsubmit;
-}
-
 (() => {
   navLinkactive();
   activeFace();
   showModal();
-  initForm();
 })();

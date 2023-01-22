@@ -15,6 +15,7 @@ function navLinkactive() {
   if (!fixed) return;
 
   function scrollActive() {
+    console.log("abc");
     const listNav = this.document.querySelectorAll(".nav-item");
     if (!listNav) return;
     const scrollY = window.pageYOffset;
@@ -77,43 +78,8 @@ function activeFace() {
   });
 }
 
-function showModal() {
-  const modalBtn = document.querySelectorAll(".showmodal");
-  const modal = document.querySelector(".modal");
-  const bodyModal = document.querySelector(".wrap-body");
-  const switchBtn = document.querySelector(".switch-body");
-  const signup = document.querySelector(".signup");
-  const login = document.querySelector(".login");
-
-  console.log(switchBtn);
-  console.log(bodyModal);
-  if (!modalBtn) return;
-  [...modalBtn].forEach((btn) => {
-    btn.addEventListener("click", () => {
-      modal.classList.add("open");
-    });
-  });
-
-  modal.addEventListener("click", (event) => {
-    if (bodyModal && bodyModal.contains(event.target)) return;
-    modal.classList.remove("open");
-  });
-
-  switchBtn.addEventListener("click", () => {
-    signup.classList.toggle("open");
-    login.classList.toggle("open");
-  });
-}
-
-function initForm() {
-  const form = document.querySelector(".auth-form");
-
-  form.onsubmit;
-}
-
 (() => {
   navLinkactive();
   activeFace();
   showModal();
-  initForm();
 })();

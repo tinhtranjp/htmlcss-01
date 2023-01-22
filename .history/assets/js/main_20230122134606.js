@@ -81,7 +81,7 @@ function showModal() {
   const modalBtn = document.querySelectorAll(".showmodal");
   const modal = document.querySelector(".modal");
   const bodyModal = document.querySelector(".wrap-body");
-  const switchBtn = document.querySelector(".switch-body");
+  const switchBtn = document.querySelector(".auth-form-heading");
   const signup = document.querySelector(".signup");
   const login = document.querySelector(".login");
 
@@ -95,25 +95,17 @@ function showModal() {
   });
 
   modal.addEventListener("click", (event) => {
-    if (bodyModal && bodyModal.contains(event.target)) return;
-    modal.classList.remove("open");
+    if (bodyModal && bodyModal.contains(event.target))
+      modal.classList.remove("open");
   });
 
-  switchBtn.addEventListener("click", () => {
-    signup.classList.toggle("open");
-    login.classList.toggle("open");
+  document.body.addEventListener("click", (e) => {
+    console.log(e.target);
   });
-}
-
-function initForm() {
-  const form = document.querySelector(".auth-form");
-
-  form.onsubmit;
 }
 
 (() => {
   navLinkactive();
   activeFace();
   showModal();
-  initForm();
 })();

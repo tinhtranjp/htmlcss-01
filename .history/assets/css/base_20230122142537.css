@@ -107,10 +107,8 @@ a {
 .switch-body {
   width: 170px;
   height: 30px;
-  background: transparent;
+  background: red;
   position: absolute;
-  right: 92px;
-  top: 54px;
   border: none;
 }
 .switch-body:hover {

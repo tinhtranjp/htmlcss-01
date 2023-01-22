@@ -106,9 +106,8 @@ function showModal() {
 }
 
 function initForm() {
-  const form = document.querySelector(".auth-form");
-
-  form.onsubmit;
+  const form = document.querySelector(".form-submit");
+  form.addEventListener("submit", () => {});
 }
 
 (() => {

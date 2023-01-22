@@ -105,10 +105,10 @@ function showModal() {
   });
 }
 
-function initForm() {
+function initForm(params) {
   const form = document.querySelector(".auth-form");
 
-  form.onsubmit;
+  form.addEventListener("submit", () => {});
 }
 
 (() => {
