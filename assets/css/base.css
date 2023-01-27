@@ -91,218 +91,110 @@ a {
 }
 
 /* =====================> Modal <======================= */
-
 .modal {
   position: fixed;
   top: 0;
+  left: 0;
   right: 0;
   bottom: 0;
-  left: 0;
   z-index: 2;
-  display: flex;
-  animation: fadeIn linear 0.2s;
   display: none;
 }
 
-.switch-body {
-  width: 170px;
-  height: 30px;
-  background: transparent;
-  position: absolute;
-  right: 92px;
-  top: 54px;
-  border: none;
-}
-.switch-body:hover {
-  cursor: pointer;
-  opacity: 0.7;
-}
-.modal.open {
+.modal.active {
   display: flex;
 }
 
-.login {
-  display: none;
-}
-
-.signup {
-  display: none;
-}
-
-.login.open {
-  display: block;
-}
-
-.signup.open {
-  display: block;
-}
-
-.modal .overlay {
+.overlay {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: rgb(0, 0, 0, 0.3);
+  background-color: rgb(0, 0, 0, 0.4);
 }
 
-.wrap-body {
+.modal-body {
+  display: flex;
   position: relative;
-  border-radius: 20px;
-  background: #fff;
+
+  min-width: 600px;
+  padding: 50px 100px;
   margin: auto;
-  overflow: hidden;
-  min-width: 800px;
-  z-index: 2;
+
+  border-radius: 3px;
+  background-color: #fff;
+  z-index: 3;
   animation: showmodal linear 0.2s;
 }
 
-.wrap-body {
-  margin-top: 18vh;
-}
-
-.modal .body {
-  padding: 48px 48px 30px 48px;
-  box-shadow: 0px 18px 36px rgba(0, 0, 0, 0.05);
-}
-
-.auth-form-header {
+.modal .form-wrapper {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 600px;
   margin: auto;
 }
 
-.auth-form-heading {
-  font-size: 3.5rem;
-  font-weight: 600;
-}
-
-.switch-btn {
-  font-weight: 500;
-  font-size: 2.8rem;
-  color: #ffb900;
-}
-
-.switch-btn:hover {
-  cursor: pointer;
-  opacity: 0.9;
-}
-
-.auth-form_group:first-child {
-  margin-top: 40px;
-}
-
-.auth-form_group:not(:first-child) {
+.modal .form-group {
+  display: flex;
+  flex-direction: column;
   margin-top: 20px;
 }
 
-.auth-form__input {
-  width: 600px;
-  height: 45px;
-  margin: auto;
-  display: block;
+.modal .form-group label {
+  margin-bottom: 10px;
+}
+
+.modal .btn-modal {
+  width: 450px;
+  margin-top: 15px;
+  text-align: end;
+}
+
+.modal input {
+  padding: 6px;
   outline: none;
+  border-radius: 3px;
+  border: 2px solid rgb(145, 141, 141);
+}
+.modal input.valid {
+  border-color: #008000;
 }
 
-.auth-form__input::placeholder {
-  padding-left: 20px;
+.modal input.invalid {
+  border-color: #f33a58;
 }
 
-.auth-control {
-  margin: 60px auto 0 auto;
-  width: 600px;
-  display: flex;
-  justify-content: end;
-}
-
-.auth-control button {
-  color: #5f5b53;
-  padding: 14px 22px;
-  min-width: 170px;
+.modal button {
+  padding: 10px 24px;
+  background-color: #ffb900;
   border: none;
-  font-weight: 500;
-  font-size: 1.6rem;
-  border-radius: 2px;
-  transition: ease 0.2s;
+  border-radius: 3px;
 }
 
-.auth-control button:first-child:hover {
-  background-color: #333;
-}
-
-.auth-control button:last-child {
-  color: #fff;
-  margin-left: 50px;
-  background: var(--primary-color);
-}
-
-.auth-control button:hover {
+.modal button:hover {
   cursor: pointer;
   opacity: 0.8;
 }
 
-.socials-wrap {
-  background-color: #5f5b53;
+.modal .messageError {
+  font-size: 12px;
+  margin-top: 10px;
 }
 
-.auth-form_socials {
-  padding: 12px;
-  width: 600px;
-  margin: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.modal .messageError.valid {
+  color: #008000;
 }
 
-.social-group {
-  background-color: #92bdf4;
-  padding: 10px 18px;
-  border-radius: 2px;
-  transition: ease 0.2s;
+.modal .messageError.invalid {
+  color: #f33a58;
 }
-
-.social-group:hover {
-  cursor: pointer;
-  background: #f9d368;
-}
-
-.social-group a {
-  margin-right: 12px;
-  display: inline-block;
-  text-align: center;
-  padding: 4px;
-  min-width: 26px;
-  background: #166fe5;
-  border-radius: 2px;
-}
-
-/* =======================> Login <============================ */
-
-.auth-form_help {
-  margin: 22px auto auto auto;
-  width: 600px;
-  display: flex;
-  justify-content: end;
-}
-
-.auth-form_help a:first-child {
-  color: var(--primary-color);
-  position: relative;
-}
-
-.auth-form_help a:first-child::after {
+.modal .close {
+  border-radius: 20px;
+  padding: 10px 15px;
   position: absolute;
-  content: "";
-  display: block;
-  height: 25px;
-  width: 1.2px;
-  background-color: #dddad3;
-  top: -4px;
-  right: -20px;
-  cursor: default;
+  background-color: #ffb900;
+  top: -17px;
+  right: -17px;
 }
 
-.auth-form_help a:last-child {
-  margin-left: 40px;
-  color: #5f5b53;
+.modal .close:hover {
+  cursor: pointer;
+  opacity: 1;
 }

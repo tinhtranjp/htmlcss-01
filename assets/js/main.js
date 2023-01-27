@@ -77,43 +77,139 @@ function activeFace() {
   });
 }
 
-function showModal() {
-  const modalBtn = document.querySelectorAll(".showmodal");
-  const modal = document.querySelector(".modal");
-  const bodyModal = document.querySelector(".wrap-body");
-  const switchBtn = document.querySelector(".switch-body");
-  const signup = document.querySelector(".signup");
-  const login = document.querySelector(".login");
+function valid(element, mess) {
+  element.classList.add("valid");
+  mess.classList.add("valid");
+  element.classList.remove("invalid");
+  mess.classList.remove("invalid");
+}
 
-  console.log(switchBtn);
-  console.log(bodyModal);
-  if (!modalBtn) return;
-  [...modalBtn].forEach((btn) => {
-    btn.addEventListener("click", () => {
-      modal.classList.add("open");
-    });
-  });
-
-  modal.addEventListener("click", (event) => {
-    if (bodyModal && bodyModal.contains(event.target)) return;
-    modal.classList.remove("open");
-  });
-
-  switchBtn.addEventListener("click", () => {
-    signup.classList.toggle("open");
-    login.classList.toggle("open");
-  });
+function invalid(element, mess) {
+  element.classList.remove("valid");
+  element.classList.add("invalid");
+  mess.classList.add("invalid");
+  mess.classList.remove("valid");
 }
 
 function initForm() {
-  const form = document.querySelector(".auth-form");
+  let formValues = {};
+  const form = document.getElementById("form");
+  if (!form) return;
+  const inputs = document.querySelectorAll("input");
 
-  form.onsubmit;
+  const email = document.querySelector("[name = email]");
+  const password = document.querySelector("[name = password]");
+  const checkpass = document.querySelector("[name = checkpass]");
+
+  email.addEventListener("blur", () => {
+    const mess = email.parentElement.querySelector(".messageError");
+    const regexEmail =
+      /^[a-zA-Z0-9]+(?:\.[a-zA-Z0-9]+)*@[a-zA-Z0-9]+(?:\.[a-zA-Z0-9]+)*$/;
+
+    if (!email.value) {
+      invalid(email, mess);
+      mess.textContent = "vui long nhap vao day";
+      return;
+    }
+
+    if (!regexEmail.test(email.value)) {
+      mess.textContent = "email khong hop le";
+      invalid(email, mess);
+    } else {
+      valid(email, mess);
+      mess.textContent = "email ngon r do anh zai oi";
+    }
+  });
+
+  password.addEventListener("blur", () => {
+    const mess = password.parentElement.querySelector(".messageError");
+    if (!password.value) {
+      invalid(password, mess);
+      mess.textContent = "vui long nhap vao day";
+      return;
+    }
+    if (password.value.length < 8) {
+      mess.textContent = "vui long nhap toi thieu 8 ki tu";
+      invalid(password, mess);
+      return;
+    }
+
+    if (!/[A-Z]/.test(password.value)) {
+      mess.textContent = "vui long nhap it nhat 1 chu in hoa";
+      invalid(password, mess);
+    } else {
+      mess.textContent = "password valid";
+      valid(password, mess);
+    }
+  });
+
+  checkpass.addEventListener("blur", () => {
+    const passwordValue = password.value;
+    const mess = checkpass.parentElement.querySelector(".messageError");
+    if (!checkpass.value) {
+      invalid(checkpass, mess);
+      mess.textContent = "vui long nhap vao day";
+      return;
+    }
+    if (checkpass.value !== passwordValue) {
+      invalid(checkpass, mess);
+      mess.textContent = "sai roi ban oi";
+    } else {
+      mess.textContent = "PASS";
+      valid(checkpass, mess);
+    }
+  });
+
+  Array.from(inputs).forEach((input) => {
+    const massage = input.parentElement.querySelector(".messageError");
+    input.addEventListener("input", (e) => {
+      input.classList.remove("valid");
+      input.classList.remove("invalid");
+      massage.classList.remove("invalid");
+      massage.classList.remove("valid");
+      massage.textContent = "";
+    });
+  });
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    Array.from(inputs).forEach((input) => {
+      const message = input.parentElement.querySelector(".messageError");
+      if (input.value.length === 0) {
+        message.textContent = "vui long khong bo trong";
+        invalid(input, message);
+      } else {
+        let keyValues = input.getAttribute("name");
+        formValues[keyValues] = input.value;
+      }
+    });
+    console.log(formValues);
+  });
 }
 
+function showModal() {
+  const close = document.querySelector(".close");
+  const modalBody = document.querySelector(".modal-body");
+  const modalBtn = document.querySelectorAll(".showmodal");
+  const modal = document.querySelector(".modal");
+  Array.from(modalBtn).forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      modal.classList.add("active");
+    });
+  });
+
+  close.addEventListener("click", () => {
+    modal.classList.remove("active");
+  });
+
+  modal.addEventListener("click", (e) => {
+    if (modalBody && modalBody.contains(e.target)) return;
+    modal.classList.remove("active");
+  });
+}
 (() => {
+  showModal();
   navLinkactive();
   activeFace();
-  showModal();
   initForm();
 })();

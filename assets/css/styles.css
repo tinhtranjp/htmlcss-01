@@ -310,10 +310,13 @@
   margin-top: 55px;
   display: flex;
   gap: 30px;
+  flex-shrink: 0;
+  overflow: hidden;
 }
 
 .courses-item {
   width: 370px;
+  flex-shrink: 0;
   border-radius: 12px;
   border: 1px solid #e2dfda;
   background-color: #fff;
@@ -395,7 +398,14 @@
   padding: 100px;
 }
 
+.feedback-body {
+  display: flex;
+  /* overflow: hidden; */
+}
+
 .feedback .body {
+  width: 100%;
+  flex-shrink: 0;
   padding: 96px 0;
   display: flex;
   align-items: center;
