@@ -91,6 +91,9 @@ a {
 }
 
 /* =====================> Modal <======================= */
+.modal-media.active {
+}
+
 .modal-media,
 .modal {
   position: fixed;
@@ -101,7 +104,7 @@ a {
   z-index: 2;
   display: none;
 }
-.modal-media.active,
+.modal-media,
 .modal.active {
   display: flex;
 }
@@ -209,8 +212,6 @@ iframe {
   width: 800px;
   height: 500px;
   margin: auto;
-
   border: 5px solid #ccc;
   z-index: 2;
-  animation: showmodal 0.25s linear;
 }

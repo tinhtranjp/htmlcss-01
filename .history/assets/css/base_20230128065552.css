@@ -101,7 +101,7 @@ a {
   z-index: 2;
   display: none;
 }
-.modal-media.active,
+
 .modal.active {
   display: flex;
 }
@@ -198,19 +198,4 @@ a {
 .modal .close:hover {
   cursor: pointer;
   opacity: 1;
-}
-
-iframe {
-  height: 100%;
-  width: 100%;
-}
-
-.wrapper-iframe {
-  width: 800px;
-  height: 500px;
-  margin: auto;
-
-  border: 5px solid #ccc;
-  z-index: 2;
-  animation: showmodal 0.25s linear;
 }

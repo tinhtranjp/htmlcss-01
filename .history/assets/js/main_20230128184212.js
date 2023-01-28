@@ -94,8 +94,6 @@ window.addEventListener("load", () => {
 
   function initForm() {
     let formValues = {};
-    let isValid = true;
-
     const form = document.getElementById("form");
     if (!form) return;
     const inputs = document.querySelectorAll("input");
@@ -176,6 +174,7 @@ window.addEventListener("load", () => {
     });
 
     form.addEventListener("submit", (e) => {
+      let isvalid = false;
       e.preventDefault();
       Array.from(inputs).forEach((input) => {
         const message = input.parentElement.querySelector(".messageError");
@@ -183,32 +182,18 @@ window.addEventListener("load", () => {
           message.textContent = "vui long khong bo trong";
           invalid(input, message);
         } else {
+          isvalid = true;
           let keyValues = input.getAttribute("name");
           formValues[keyValues] = input.value;
         }
       });
-
-      for (let i = 0; i < Array.from(inputs).length; i++) {
-        if (Array.from(inputs)[i].value.length === 0) {
-          isValid = false;
-          return;
-        }
-      }
-
-      if (isValid) {
+      if (!isvalid) return;
+      if (isvalid) {
         submit.textContent = "submitting...";
         setTimeout(() => {
           document.querySelector(".modal").classList.remove("active");
         }, 1000);
-        setTimeout(() => {
-          Array.from(inputs).forEach((input) => {
-            const message = input.parentElement.querySelector(".messageError");
-            input.value = "";
-            message.textContent = "";
-            message.classList.remove("valid");
-            input.classList.remove("valid");
-          });
-        }, 1500);
+
         setTimeout(() => {
           alert("chuc mung chan be du");
         }, 1500);

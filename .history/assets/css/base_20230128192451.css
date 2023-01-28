@@ -120,6 +120,7 @@ a {
   min-width: 600px;
   padding: 50px 100px;
   margin: auto;
+  margin-top: 20vh;
 
   border-radius: 3px;
   background-color: #fff;
@@ -209,7 +210,6 @@ iframe {
   width: 800px;
   height: 500px;
   margin: auto;
-
   border: 5px solid #ccc;
   z-index: 2;
   animation: showmodal 0.25s linear;

@@ -200,15 +200,12 @@ window.addEventListener("load", () => {
         setTimeout(() => {
           document.querySelector(".modal").classList.remove("active");
         }, 1000);
-        setTimeout(() => {
-          Array.from(inputs).forEach((input) => {
-            const message = input.parentElement.querySelector(".messageError");
-            input.value = "";
-            message.textContent = "";
-            message.classList.remove("valid");
-            input.classList.remove("valid");
-          });
-        }, 1500);
+        Array.from(inputs).forEach((input) => {
+          const message = input.parentElement.querySelector(".messageError");
+          input.value = "";
+          message.textContent = "";
+          message.classList.remove("valid");
+        });
         setTimeout(() => {
           alert("chuc mung chan be du");
         }, 1500);

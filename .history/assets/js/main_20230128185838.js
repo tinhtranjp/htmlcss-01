@@ -94,7 +94,7 @@ window.addEventListener("load", () => {
 
   function initForm() {
     let formValues = {};
-    let isValid = true;
+    let isvalid = false;
 
     const form = document.getElementById("form");
     if (!form) return;
@@ -187,28 +187,13 @@ window.addEventListener("load", () => {
           formValues[keyValues] = input.value;
         }
       });
-
-      for (let i = 0; i < Array.from(inputs).length; i++) {
-        if (Array.from(inputs)[i].value.length === 0) {
-          isValid = false;
-          return;
-        }
-      }
-
-      if (isValid) {
+      if (!isvalid) return;
+      if (isvalid) {
         submit.textContent = "submitting...";
         setTimeout(() => {
           document.querySelector(".modal").classList.remove("active");
         }, 1000);
-        setTimeout(() => {
-          Array.from(inputs).forEach((input) => {
-            const message = input.parentElement.querySelector(".messageError");
-            input.value = "";
-            message.textContent = "";
-            message.classList.remove("valid");
-            input.classList.remove("valid");
-          });
-        }, 1500);
+
         setTimeout(() => {
           alert("chuc mung chan be du");
         }, 1500);
