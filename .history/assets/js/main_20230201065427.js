@@ -327,8 +327,15 @@ window.addEventListener("load", () => {
     const modalBody = document.querySelector(".wrapper-iframe");
     const modalBtn = document.querySelector(".iframe");
     const modal = document.querySelector(".modal-media");
-    const iframeELement =
-      '<iframe width="800" height="500" src="https://www.youtube.com/embed/Zu_6l0ljXz0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>';
+    const iframeELement = `<iframe
+      width="800"
+      height="500"
+      src="https://www.youtube.com/embed/fkF-QLaj6yE"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen
+    ></iframe>`;
 
     modalBtn.addEventListener("click", () => {
       modal.classList.add("active");
